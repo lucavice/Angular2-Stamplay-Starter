@@ -1,0 +1,14 @@
+{
+  "appId": "lucastamplaytest",
+  "apiKey": "4fc94942715334646af92ea035843898df74cf253954c5c5108569b5d6da1891",
+  "public": "./",
+  "ignore": [
+    "stamplay.json",
+    "**/.*",
+    "**/node_modules/typescript",
+    "**/node_modules/typings",
+    "**/node_modules/lite-server",
+    "**/node_modules/concurrently",
+    "**/node_modules/.bin"
+  ]
+}
