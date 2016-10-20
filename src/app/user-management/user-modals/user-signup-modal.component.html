@@ -1,0 +1,55 @@
+<div class="modal fade" id="signup-dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h4 class="modal-title"><span class="glyphicon glyphicon-user"></span> Sign Up</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal" (ngSubmit)="onSignup()" #signUpForm="ngForm">
+					<fieldset>
+
+						<div class="form-group">
+							<label for="inputSignUpDisplayName" class="col-md-2 control-label">Display Name</label>
+
+							<div class="col-md-10">
+								<input type="text" class="form-control" name="inputSignUpDisplayName" id="inputSignUpDisplayName" placeholder="Your alias"
+									[(ngModel)]='signup.displayName' required minlength="4" #inputSignUpDisplayName="ngModel">
+								<span *ngIf='!inputSignUpDisplayName.valid' class="help-block">Your name must be at least 4 characters</span>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="inputSignUpEmail" class="col-md-2 control-label">E-mail</label>
+
+							<div class="col-md-10">
+								<input type="text" class="form-control" name="inputSignUpEmail" id="inputSignUpEmail" placeholder="Your E-mail" [(ngModel)]='signup.email'
+									required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #inputSignUpEmail="ngModel">
+								<span *ngIf='!inputSignUpEmail.valid' class="help-block">Insert valid email</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="inputSignUpPassword" class="col-md-2 control-label">Password</label>
+
+							<div class="col-md-10" [class.has-error]='inputSignUpPassword.valid'>
+								<input type="password" class="form-control" name="inputSignUpPassword" id="inputSignUpPassword" placeholder="Password" [(ngModel)]='signup.password'
+									required minlength="5" #inputSignUpPassword="ngModel">
+								<span *ngIf='!inputSignUpPassword.valid' class="help-block">Password must be at least 5 characters</span>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-10 col-md-offset-2">
+								<button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Cancel</button>
+								<button type="submit" class="btn btn-primary" [disabled]="!signUpForm.form.valid">SignUp</button>
+							</div>
+						</div>
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
