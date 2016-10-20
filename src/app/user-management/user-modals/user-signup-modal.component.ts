@@ -34,7 +34,7 @@ export class UserSignupModalComponent {
   }
 }
 
-class SignupData {
+export class SignupData {
 
   displayName: string;
   email: string;

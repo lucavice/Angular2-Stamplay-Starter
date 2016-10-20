@@ -32,7 +32,7 @@ export class UserLoginModalComponent {
   }
 }
 
-class LoginData {
+export class LoginData {
   email: string;
   password: string;
 }

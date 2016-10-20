@@ -7,6 +7,7 @@ declare var $:any;
 export class UserManagementService {
 
    public user: BehaviorSubject<User> = new BehaviorSubject<User>(null);
+   public users: BehaviorSubject<User[]> = new BehaviorSubject<User[]>(null);
 
    constructor() {
         var user = this.user;
@@ -47,6 +48,16 @@ export class UserManagementService {
             $.snackbar({content: 'Logged out.', style: 'toast'});
         });
     }    
+
+     public getUsers() {
+        var users = this.users;
+        Stamplay.User.get()
+            .then(function (res: any) {
+                users.next(res.data as User[]);
+            }, function (err: any) {
+                console.log(JSON.stringify(err));
+            })
+    }
 }
 
 export class User {

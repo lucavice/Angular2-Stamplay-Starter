@@ -1,14 +1,8 @@
 {
-  "appId": "lucastamplaytest",
-  "apiKey": "4fc94942715334646af92ea035843898df74cf253954c5c5108569b5d6da1891",
-  "public": "./",
+  "appId": "angular2-starter",
+  "apiKey": "9ce111f1f8c15a4a3bb9da935698328c581a44c00f129b77e2b04aa25db6c53e",
+  "public": "./dist",
   "ignore": [
-    "stamplay.json",
-    "**/.*",
-    "**/node_modules/typescript",
-    "**/node_modules/typings",
-    "**/node_modules/lite-server",
-    "**/node_modules/concurrently",
-    "**/node_modules/.bin"
+    "stamplay.json"
   ]
 }
