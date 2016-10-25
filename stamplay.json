@@ -1,6 +1,6 @@
 {
-  "appId": "angular2-starter",
-  "apiKey": "9ce111f1f8c15a4a3bb9da935698328c581a44c00f129b77e2b04aa25db6c53e",
+  "appId": "YOUR-APP-ID",
+  "apiKey": "YOUR--API-KEY",
   "public": "./dist",
   "ignore": [
     "stamplay.json"

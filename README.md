@@ -1,31 +1,42 @@
-# AngularStamplayStarter
+# Angular2-Stamplay-Starter
+
+This project is a *work in progress* starter kit for developing an Angular 2 application and using Stamplay as a backend-as-a-service.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+In order to use this project for your Stamplay website, install the Stamplay CLI: `npm install -g stamplay-cli`
+Change `stamplay.json` with your application id and api key that you'll find in the Stamplay website editor.
+Set `Stamplay.init("#YOUR-APP-ID");` in index.html with your Stamplay app id.
+Run `npm install` to install the packages.
 
-## Code scaffolding
+Now you can start your application locally in two ways:
+1) `ng serve` from the angular-cli, which includes LiveReload but you must set your Stamplay app to accept CORS from your localhost to access your Stamplay backend through the js sdk.
+2) `ng build` and then run the content of the `dist` folder with `stamplay start`. This does not require to set the CORS.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
+Use `ng build -prod` or the experimental `ng build -prod --aot` with Ahead-of-time compilation (which drastically reduces the application size) to kick off the production build process in angular-cli.
 
-## Build
+Ultimately, use `stamplay deploy` to deploy your application (`dist` folder) and access it at `https://YOUR-APP-ID.stamplayapp.com/`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+The styling is provided by [Material Design for Bootstrap](https://github.com/FezVrasta/bootstrap-material-design).
+The .css and .js dependencies can be inserted in `angular-cli.json` which currently includes:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```javascript
+styles": [
+        "../fonts/roboto.css",
+        "../fonts/material-icons.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/bootstrap-material-design/dist/css/bootstrap-material-design.min.css",
+        "../node_modules/bootstrap-material-design/dist/css/ripples.min.css",
+        "../node_modules/snackbarjs/dist/snackbar.min.css",      
+        "styles.css"
+      ],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/bootstrap-material-design/dist/js/material.min.js",
+        "../node_modules/bootstrap-material-design/dist/js/ripples.min.js",
+        "../node_modules/snackbarjs/dist/snackbar.min.js",
+        "../node_modules/stamplay-sdk/dist/stamplay.min.js"
+      ]
+```
+You can change the styling and provide your own Bootstrap theme by changing these css dependencies.
