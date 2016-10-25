@@ -5,12 +5,17 @@ This project is a *work in progress* starter kit for developing an Angular 2 app
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.17.
 
 In order to use this project for your Stamplay website, install the Stamplay CLI: `npm install -g stamplay-cli`
+
 Change `stamplay.json` with your application id and api key that you'll find in the Stamplay website editor.
+
 Set `Stamplay.init("#YOUR-APP-ID");` in index.html with your Stamplay app id.
+
 Run `npm install` to install the packages.
 
 Now you can start your application locally in two ways:
+
 1) `ng serve` from the angular-cli, which includes LiveReload but you must set your Stamplay app to accept CORS from your localhost to access your Stamplay backend through the js sdk.
+
 2) `ng build` and then run the content of the `dist` folder with `stamplay start`. This does not require to set the CORS.
 
 Use `ng build -prod` or the experimental `ng build -prod --aot` with Ahead-of-time compilation (which drastically reduces the application size) to kick off the production build process in angular-cli.
@@ -18,6 +23,7 @@ Use `ng build -prod` or the experimental `ng build -prod --aot` with Ahead-of-ti
 Ultimately, use `stamplay deploy` to deploy your application (`dist` folder) and access it at `https://YOUR-APP-ID.stamplayapp.com/`
 
 The styling is provided by [Material Design for Bootstrap](https://github.com/FezVrasta/bootstrap-material-design).
+
 The .css and .js dependencies can be inserted in `angular-cli.json` which currently includes:
 
 ```javascript

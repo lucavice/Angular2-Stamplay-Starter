@@ -1,6 +1,6 @@
 {
   "appId": "YOUR-APP-ID",
-  "apiKey": "YOUR--API-KEY",
+  "apiKey": "YOUR-API-KEY",
   "public": "./dist",
   "ignore": [
     "stamplay.json"
