@@ -27,7 +27,7 @@ Ultimately, use `stamplay deploy` to deploy your application (`dist` folder) and
 The .css and .js dependencies can be inserted in `angular-cli.json` which currently includes:
 
 ```javascript
-styles": [
+"styles": [
         "../fonts/roboto.css",
         "../fonts/material-icons.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -36,7 +36,7 @@ styles": [
         "../node_modules/snackbarjs/dist/snackbar.min.css",      
         "styles.css"
       ],
-      "scripts": [
+"scripts": [
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/bootstrap/dist/js/bootstrap.min.js",
         "../node_modules/bootstrap-material-design/dist/js/material.min.js",
