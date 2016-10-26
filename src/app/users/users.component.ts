@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
       this.zone.run(() => { });
     });
 
-    if (this._userService.users.getValue() == null) {
+    if (this.users == null) {
       this._userService.getUsers();
     }
 
