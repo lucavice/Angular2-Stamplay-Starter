@@ -1,8 +1,6 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { UserManagementService, User } from '../user-management/user-management.service';
 
-declare var Stamplay: any;
-
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',

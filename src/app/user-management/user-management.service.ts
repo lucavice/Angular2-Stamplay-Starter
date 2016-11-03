@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
-declare var Stamplay: any;
-declare var $: any;
+
 
 @Injectable()
 export class UserManagementService {

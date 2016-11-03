@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { UserManagementService, User } from '../user-management.service';
 
-declare var $: any;
-declare var Stamplay: any;
-
 @Component({
   templateUrl: './user-login-modal.component.html',
   selector: "user-login-modal"
