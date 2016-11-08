@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 
 
 @Injectable()
-export class UserManagementService {
+export class UserManagementService implements OnInit {
 
     private userSubject: BehaviorSubject<User> = new BehaviorSubject<User>(null);
     private usersSubject: BehaviorSubject<User[]> = new BehaviorSubject<User[]>(null);
@@ -17,7 +17,7 @@ export class UserManagementService {
         return this.usersSubject as Observable<User[]>;
     }
 
-    constructor() {
+    ngOnInit() {
         var user = this.userSubject;
         Stamplay.User.currentUser()
             .then(function (res: any) {

@@ -24,7 +24,7 @@ Run `npm install` to install the packages.
 
 Now you can start your application locally in two ways:
 
-1) `ng serve` from the angular-cli, which includes LiveReload. You must set your Stamplay app to accept CORS from your localhost, otherwise the Stamplay AJAX calls will fail.
+1) `ng serve` from the angular-cli, which includes Live Reload. You must set your Stamplay app to accept CORS from your localhost (you can add "localhost:4200", as this is the port of the NG Live Dev Server) otherwise the Stamplay AJAX calls will fail.
 
 2) `ng build` to build the project and populate the `dist` folder, and then start the local server with `stamplay start`. This does not require to set the CORS and it is officially supported by the Stamplay platform, but you lose the LiveReload in dev.
 
